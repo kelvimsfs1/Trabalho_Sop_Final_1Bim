@@ -10,7 +10,10 @@ vi london.txt
 wget https://github.com/leandersonandre/shell-script/blob/master/london.tar.gz?raw=true
 
 tar -xvf london.tar.gz?raw=true
-
+mv /root/london/extrato.txt .
+mv /root/london/saldo.txt .
+rm -rf london
+rm london.tar.gz?raw=true
 -----
 
 vi lisbon.txt
@@ -19,6 +22,10 @@ vi lisbon.txt
 wget https://github.com/leandersonandre/shell-script/blob/master/lisbon.tar.gz?raw=true
 
 tar -xvf lisbon.tar.gz?raw=true
+mv /root/lisbon/extrato.txt .
+mv /root/lisbon/saldo.txt .
+rm -rf lisbon
+rm lisbon.tar.gz?raw=true
 
 ----------
 
@@ -28,7 +35,10 @@ vi newyork.txt
 wget https://github.com/leandersonandre/shell-script/blob/master/newyork.tar.gz?raw=true
 
 tar -xvf newyork.tar.gz?raw=true
-
+mv /root/newyork/extrato.txt .
+mv /root/newyork/saldo.txt .
+rm -rf newyork
+rm newyork.tar.gz?raw=true
 ----------
 
 vi vienna.txt
@@ -37,6 +47,10 @@ vi vienna.txt
 wget https://github.com/leandersonandre/shell-script/blob/master/vienna.tar.gz?raw=true
 # Professor tinha dois links nomeados de "lisbon" e nenhum de vienna, apenas para informar.
 tar -xvf vienna.tar.gz?raw=true
+mv /root/vienna/extrato.txt .
+mv /root/vienna/saldo.txt .
+rm -rf vienna
+rm vienna.tar.gz?raw=true
 
 --------
 
@@ -88,26 +102,22 @@ done
 if [ $usuario = "london" ]; then
    chmod a+x london.txt
    ./london.txt
-   mv /root/london/extrato.txt saldo.txt .
-   rm -rf london
+   
  
 elif [ $usuario = "newyork" ]; then
     chmod a+x newyork.txt
     ./newyork.txt
-    mv /root/newyork/extrato.txt saldo.txt .
-    rm -rf newyork
+    
  
 elif [ $usuario = "lisbon" ]; then
     chmod a+x lisbon.txt
     ./lisbon.txt
-    mv /root/lisbon/extrato.txt saldo.txt .
-    rm -rf lisbon
+    
  
 else
     chmod a+x vienna.txt
     ./vienna.txt
-    mv /root/vienna/extrato.txt saldo.txt .
-    rm -rf vienna
+    
 
 opcao=0
 while [ $opcao -ne 3 ]
